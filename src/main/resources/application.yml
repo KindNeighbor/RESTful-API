@@ -1,9 +1,9 @@
 server:
   port: 8088
 
-#logging:
-#  level:
-#    org.springframework: DEBUG
+logging:
+  level:
+    org.springframework: DEBUG
 
 spring:
   messages:
@@ -11,3 +11,13 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  security:
+    user:
+      name: username
+      password: passw0rd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
