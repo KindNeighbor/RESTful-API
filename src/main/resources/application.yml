@@ -4,3 +4,10 @@ server:
 #logging:
 #  level:
 #    org.springframework: DEBUG
+
+spring:
+  messages:
+    basename: messages
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
