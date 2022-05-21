@@ -1,11 +1,15 @@
 server:
   port: 8088
 
-logging:
-  level:
-    org.springframework: DEBUG
+#logging:
+#  level:
+#    org.springframework: DEBUG
 
 spring:
+  sql:
+    init:
+      data-locations:
+        - classpath:data.sql
   messages:
     basename: messages
   mvc:
@@ -15,6 +19,22 @@ spring:
     user:
       name: username
       password: passw0rd
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    defer-datasource-initialization: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
 
 management:
   endpoints:
