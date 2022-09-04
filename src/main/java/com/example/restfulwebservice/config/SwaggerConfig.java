@@ -26,8 +26,8 @@ import java.util.*;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    private static final Contact DEFAULT_CONTACT = new Contact("Kenneth Lee",
-            "http://www.joneconsulting.co.kr","edowon@joneconsulting.co.kr");
+    private static final Contact DEFAULT_CONTACT = new Contact("choi",
+            "http://www.KindNeighbor.com");
 
     private static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Awesome API Title",
             "My User management REST API service", "1.0", "urn:tos",
